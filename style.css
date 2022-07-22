@@ -65,7 +65,7 @@ nav {
   margin: 0;
   padding: 20px 0;
   height: 60vh;
-  top: 8vh;
+  top: 75px;
   background-color: #ffec5c;
   align-items: center;
   justify-content: space-around;
@@ -165,6 +165,47 @@ nav {
 
 /* MAIN PAGE */
 
+.dots {
+  position: absolute;
+  bottom: 40%;
+  right: 5%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 150px;
+  height: 150px;
+}
+
+.dot-1 {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+}
+
+.dot-2 {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+}
+
+.dot-3 {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+}
+
+.isGrey {
+  background-color: grey;
+}
+
 .carousel {
   width: 100%;
   height: 100vh;
@@ -179,6 +220,34 @@ nav {
   right: 0;
   left: 0;
   bottom: 0;
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+}
+
+.img-1 {
+  background-image: url(images/inicio/foto-3.JPG);
+  background-position: 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-2 {
+  background-image: url(images/audiovisual/parque-natural-el-valle-del-cocora-2020.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-3 {
+  background-image: url(images/bioconstruccion/Piso\ en\ Barro\ La\ Calera\ -\ Colombia\ 3.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .overlay {
