@@ -138,7 +138,25 @@ const carousel = () => {
 
 }
 
+const aboutPopUp = () => {
 
+  let bio = document.querySelector('.bio-container');
 
+  window.addEventListener('scroll', () => {
+    let bioChildren = bio.children;
+    for (i = 0; i < bioChildren.length; i++) {
+      let screenPosition = window.innerHeight / 1.7;
+      let bioPosition = bioChildren[i].getBoundingClientRect().top;
+
+      if (bioPosition < screenPosition) {
+        bioChildren[i].classList.add('popActive');
+      } else {
+        bioChildren[i].classList.remove('popActive');
+      }
+    }
+  });
+}
+
+aboutPopUp();
 carousel();
 navSlide();

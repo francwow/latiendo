@@ -140,6 +140,10 @@
           </div>
         </section>
         <!-- ABOUT SECTION -->
+
+        <!-- ALIADOS SECTION -->
+        <section class="aliados-section"></section>
+        <!-- / ALIADOS SECTION -->
       </div>
 
       <!-- / HOME PAGE -->
@@ -150,5 +154,18 @@
       crossorigin="anonymous"
     ></script>
     <script src="script.js"></script>
+
+    <!-- Same window position on reload -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        var scrollpos = localStorage.getItem("scrollpos");
+        if (scrollpos) window.scrollTo(0, scrollpos);
+      });
+
+      window.onbeforeunload = function (e) {
+        localStorage.setItem("scrollpos", window.scrollY);
+      };
+    </script>
+    <!-- / Same window position on reload -->
   </body>
 </html>
