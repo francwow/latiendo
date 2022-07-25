@@ -73,7 +73,7 @@ nav {
   transform: scale(1,0);
   transform-origin: top;
   transition: transform .5s ease-in-out;
-  z-index: 89;
+  z-index: 999;
   border-radius: 0 0 30px 30px;
   border-bottom: #4c8c46 solid 2px;
   opacity: .9;
@@ -163,7 +163,13 @@ nav {
 
 /* / MAIN-NAV */
 
-/* MAIN PAGE */
+/* HOME PAGE */
+
+.sections-container {
+  position: relative;
+}
+
+/* MAIN SECTION */
 
 .dots {
   position: absolute;
@@ -216,12 +222,61 @@ nav {
   max-height: 100vh;
   width: 100%;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   opacity: 0;
   transition: opacity .5s ease-in-out;
+}
+
+.carousel_info_container {
+  max-width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+}
+
+.carousel_info_container a {
+  z-index: 99;
+}
+
+.carousel_info_container h2 {
+  margin: 0 auto;
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+}
+
+.carousel_header {
+  text-align: center;
+  margin: auto;
+  font-family: Bodo;
+  color: white;
+  width: 100%;
+}
+
+.carousel_button {
+  background-color: #ff5a33;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  z-index: 99;
+  transition: all .2s ease-in;
+}
+
+.carousel_button:hover {
+  transform: rotate(-5deg) scale(1.1);
+  background-color: #ff2f00;
+  transition: all .2s ease-in;
 }
 
 .show {
@@ -276,7 +331,96 @@ nav {
   z-index: 1;
 }
 
-/* / MAIN PAGE */
+/* / MAIN SECTION */
+
+/* ABOUT SECTION */
+
+.about-section {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #00b1de;
+  padding-top: 40px;
+}
+
+.about-heading {
+  background-image: url(images/graficos/grafico-7.png);
+  background-position: center;
+  background-size: cover;
+  height: 100px;
+  width: 300px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-heading h2 {
+  font-family: Bodo;
+}
+
+.bio-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bio-1 {
+  background-image: url(images/graficos/grafico-2.png);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio-1 img {
+  width: 75%;
+  border-radius: 10%;
+}
+
+.bio-2 {
+  background-image: url(images/graficos/grafico-2.png);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio-2 img {
+  width: 75%;
+  border-radius: 10%;
+}
+
+.bio-3 {
+  background-image: url(images/graficos/grafico-2.png);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio-3 img {
+  width: 75%;
+  border-radius: 10%;
+}
+
+
+
+
+/* / ABOUT SECTION */
+
+/* / HOME PAGE */
 
 /* ------------------ / MOBILE-FIRST --------------------- */
 

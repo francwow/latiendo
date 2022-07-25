@@ -4,6 +4,7 @@ const navSlide = () => {
   const navLinks = document.querySelectorAll('.nav-links li');
   const overlay = document.querySelector('.overlay');
   const section = document.querySelector('.main-section');
+  const sections = document.querySelector('.sections-container');
 
   burger.addEventListener('click', () => {
       //Toggle Nav
@@ -26,7 +27,7 @@ const navSlide = () => {
   });
 
   //Reset Main Page
-  section.addEventListener('click', () => {
+  sections.addEventListener('click', () => {
     nav.classList.remove('nav-active');
     overlay.classList.remove('overlay-visible');
     burger.classList.remove('toggle');
@@ -60,6 +61,7 @@ const carousel = () => {
   console.log(dotThree);
 
   // Set Interval for Animation
+  // as;lasfm
   let interval = setInterval(function() {
     startCarousel();
   }, 3000);
@@ -89,6 +91,8 @@ const carousel = () => {
     }
   }
 
+
+  // CONTRUIR FOR LOOP EVENTLISTENER PARA DOTS
   dotOne.addEventListener('click', () => {
     clearInterval(interval);
     index = 0;
@@ -130,9 +134,11 @@ const carousel = () => {
       startCarousel();
     }, 3000);
   })
-
   // CONTRUIR FOR LOOP EVENTLISTENER PARA DOTS
+
 }
+
+
 
 carousel();
 navSlide();
