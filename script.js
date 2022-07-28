@@ -48,7 +48,7 @@ const carousel = () => {
   const dots = document.querySelector('.dots');
   console.log(dots);
 
-  const dotsChildren = dots.children;
+  const dotsChildren = document.querySelectorAll('.dot');
   console.log(dotsChildren);
 
   const dotOne = document.querySelector('.dot-1');
@@ -61,7 +61,7 @@ const carousel = () => {
   console.log(dotThree);
 
   // Set Interval for Animation
-  // as;lasfm
+  // STOP ANIMATIONS
   let interval = setInterval(function() {
     startCarousel();
   }, 3000);
@@ -82,78 +82,114 @@ const carousel = () => {
       }
     }); 
 
-    for (i = 0; i < dotsChildren.length; i++) {
-      if (i !== index) {
-        dotsChildren[i].classList.remove('isGrey');
+    dotsChildren.forEach((item, itemIndex) => {
+      if (itemIndex === index) {
+        item.classList.add('isGrey');
       } else {
-        dotsChildren[i].classList.add('isGrey');
+        item.classList.remove('isGrey');
       }
-    }
+    }); 
   }
 
 
-  // CONTRUIR FOR LOOP EVENTLISTENER PARA DOTS
-  dotOne.addEventListener('click', () => {
-    clearInterval(interval);
-    index = 0;
-    carouselItem[0].classList.add('show');
-    carouselItem[1].classList.remove('show');
-    carouselItem[2].classList.remove('show');
-    dotOne.classList.add('isGrey');
-    dotTwo.classList.remove('isGrey');
-    dotThree.classList.remove('isGrey');
-    interval = setInterval(function() {
-      startCarousel();
-    }, 3000);
-  })
+  dotsChildren.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
 
-  dotTwo.addEventListener('click', () => {
-    clearInterval(interval);
-    index = 1;
-    carouselItem[0].classList.remove('show');
-    carouselItem[1].classList.add('show');
-    carouselItem[2].classList.remove('show');
-    dotOne.classList.remove('isGrey');
-    dotTwo.classList.add('isGrey');
-    dotThree.classList.remove('isGrey');
-    interval = setInterval(function() {
-      startCarousel();
-    }, 3000);
-  })
+      clearInterval(interval);
+      index = i;
 
-  dotThree.addEventListener('click', () => {
-    clearInterval(interval);
-    index = 2;
-    carouselItem[0].classList.remove('show');
-    carouselItem[1].classList.remove('show');
-    carouselItem[2].classList.add('show');
-    dotOne.classList.remove('isGrey');
-    dotTwo.classList.remove('isGrey');
-    dotThree.classList.add('isGrey');
-    interval = setInterval(function() {
-      startCarousel();
-    }, 3000);
-  })
-  // CONTRUIR FOR LOOP EVENTLISTENER PARA DOTS
+      carouselItem.forEach((item, j) => {
+        if (j === i) {
+          item.classList.add('show');
+        } else {
+          item.classList.remove('show');
+        }
+      });
 
+      dotsChildren.forEach((item, j) => {
+        if (j === i) {
+          item.classList.add('isGrey');
+        } else {
+          item.classList.remove('isGrey');
+        }
+      }); 
+
+      interval = setInterval(function() {
+        startCarousel();
+      }, 3000);
+    });
+  });
+
+  // dotOne.addEventListener('click', () => {
+  //   clearInterval(interval);
+  //   index = 0;
+  //   carouselItem[0].classList.add('show');
+  //   carouselItem[1].classList.remove('show');
+  //   carouselItem[2].classList.remove('show');
+  //   dotOne.classList.add('isGrey');
+  //   dotTwo.classList.remove('isGrey');
+  //   dotThree.classList.remove('isGrey');
+  //   interval = setInterval(function() {
+  //     startCarousel();
+  //   }, 3000);
+  // })
+
+  // dotTwo.addEventListener('click', () => {
+  //   clearInterval(interval);
+  //   index = 1;
+  //   carouselItem[0].classList.remove('show');
+  //   carouselItem[1].classList.add('show');
+  //   carouselItem[2].classList.remove('show');
+  //   dotOne.classList.remove('isGrey');
+  //   dotTwo.classList.add('isGrey');
+  //   dotThree.classList.remove('isGrey');
+  //   interval = setInterval(function() {
+  //     startCarousel();
+  //   }, 3000);
+  // })
+
+  // dotThree.addEventListener('click', () => {
+  //   clearInterval(interval);
+  //   index = 2;
+  //   carouselItem[0].classList.remove('show');
+  //   carouselItem[1].classList.remove('show');
+  //   carouselItem[2].classList.add('show');
+  //   dotOne.classList.remove('isGrey');
+  //   dotTwo.classList.remove('isGrey');
+  //   dotThree.classList.add('isGrey');
+  //   interval = setInterval(function() {
+  //     startCarousel();
+  //   }, 3000);
+  // })
 }
 
 const aboutPopUp = () => {
 
   let bio = document.querySelector('.bio-container');
+  let header = document.querySelector('.about-heading');
+
 
   window.addEventListener('scroll', () => {
-    let bioChildren = bio.children;
-    for (i = 0; i < bioChildren.length; i++) {
-      let screenPosition = window.innerHeight / 1.7;
-      let bioPosition = bioChildren[i].getBoundingClientRect().top;
 
+    let bioChildren = bio.children;
+    let screenPosition = window.innerHeight / 1.7;
+    let screenPosition2 = window.innerHeight / 1.3;
+    let headerPosition = header.getBoundingClientRect().top;
+
+    for (i = 0; i < bioChildren.length; i++) {
+      let bioPosition = bioChildren[i].getBoundingClientRect().top;
       if (bioPosition < screenPosition) {
         bioChildren[i].classList.add('popActive');
       } else {
         bioChildren[i].classList.remove('popActive');
       }
     }
+
+    if (headerPosition < screenPosition2) {
+      header.classList.add('header-active');
+    } else {
+      header.classList.remove('header-active');
+    } 
   });
 }
 
