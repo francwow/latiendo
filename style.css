@@ -1,6 +1,13 @@
 /* FONTS */
 
 @font-face {
+  font-family: Montserrat;
+  src: url(fonts/Montserrat-Bold.ttf);
+  src: url(fonts/Montserrat-Italic.ttf);
+  src: url(fonts/Montserrat-Medium.ttf);
+} 
+
+@font-face {
   font-family: Bodo;
   src: url(fonts/Bodo\ Amat.otf);
 }
@@ -247,9 +254,7 @@ nav {
   align-items: center;
   justify-content: center;
   height: 150px;
-  background-color: #ffec5c99;
   border-radius: 20px;
-  box-shadow: 2px 2px 5px 1px rgba(0,0,0,.3);
 }
 
 .carousel_info_container a {
@@ -257,9 +262,9 @@ nav {
 }
 
 .carousel_info_container h2 {
-  color: #4c8c46;
+  color: white;
   margin: 0 auto;
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   margin-bottom: 20px;
 }
 
@@ -273,7 +278,7 @@ nav {
 
 .carousel_button {
   background-color: #4c8c46;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Montserrat;
   border: none;
   color: white;
   width: 100px;
@@ -390,66 +395,93 @@ nav {
   align-items: center;
 }
 
-.bio-1 {
+
+.foto-aleli {
+  background-image: url(images/inicio/foto-aleli.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 75%;
+  height: 80%;
+  border-radius: 10%;
+}
+
+.foto-cami {
+  background-image: url(images/inicio/foto-cami.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 75%;
+  height: 80%;
+  border-radius: 10%;
+}
+
+.foto-juan {
+  background-image: url(images/inicio/foto-juan.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 75%;
+  height: 80%;
+  border-radius: 10%;
+}
+
+.bio {
   background-image: url(images/graficos/grafico-2.png);
   background-size: cover;
   background-position: center;
-  height: 300px;
-  width: 300px;
+  height: 350px;
+  width: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
   transform: scale(.1);
   transition: all 1s ease-in-out;
-}
-
-.bio-1 img {
-  width: 75%;
-  border-radius: 10%;
-}
-
-.bio-2 {
-  background-image: url(images/graficos/grafico-2.png);
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transform: scale(.1);
-  transition: all 1s ease-in-out;
-}
-
-.bio-2 img {
-  width: 75%;
-  border-radius: 10%;
-}
-
-.bio-3 {
-  background-image: url(images/graficos/grafico-2.png);
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transform: scale(.1);
-  transition: all 1s ease-in-out;
-}
-
-.bio-3 img {
-  width: 75%;
-  border-radius: 10%;
+  position: relative;
+  margin: 30px 0;
 }
 
 .popActive {
   opacity: 1;
   transform: scale(1);
+}
+
+.bioText-container {
+  position: absolute;
+  background-color:rgba(255, 20, 145, 0.781);
+  opacity: 0;
+  width: 75%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 10%;
+  transform: scale(1,0);
+  transform-origin: top;
+  transition: all .2s ease-in-out;
+}
+
+.bio:hover .bioText-container {
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+.bioText-container p,
+.bioText-container a button {
+  color: white;
+  font-family: Bodo;
+}
+
+.bioText-container a button {
+  background-color: #00b1de;
+  box-shadow: 2px 2px 3px 1px rgba(0,0,0,.3);
+}
+
+.bioText-container a button:hover {
+  background-color: #00c2f3;
 }
 
 /* / ABOUT SECTION */
@@ -462,6 +494,23 @@ nav {
 }
 
 /* ALIADOS SECTION */
+
+/* FOOTER */
+
+.footer {
+  background-image: url(images/photos/paisaje-4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 40vh;
+}
+
+.footer-container {
+  /* TO DO */
+}
+
+/* / FOOTER */
 
 /* / HOME PAGE */
 
@@ -511,6 +560,10 @@ nav {
 
   .logo {
     margin-left: 100px;
+  }
+
+  .carousel_info_container h2 {
+    font-size: 3rem;
   }
 
   .bio-1,

@@ -40,7 +40,7 @@ const navSlide = () => {
   });
 }
 
-
+// AUTOMATIC CAROUSEL WITH 'CLICK' EVENT LISTENERS.
 const carousel = () => {
   const carouselItem = document.querySelectorAll('.carousel_item');
   console.log(carouselItem);
@@ -163,6 +163,8 @@ const carousel = () => {
   // })
 }
 
+
+// MANIPULATE ELEMENTS IN ABOUT SECTION TO APPEAR ON SCROLL.
 const aboutPopUp = () => {
 
   let bio = document.querySelector('.bio-container');
@@ -192,6 +194,7 @@ const aboutPopUp = () => {
     } 
   });
 }
+
 
 aboutPopUp();
 carousel();
