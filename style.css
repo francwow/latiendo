@@ -194,6 +194,7 @@ nav {
   align-items: flex-end;
   width: 150px;
   height: 150px;
+  z-index: 80;
 }
 
 .dot-1 {
@@ -231,6 +232,16 @@ nav {
   z-index: 50;
 }
 
+.carousel-bg {
+  position: absolute;
+  background-color: white;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 35;
+}
+
 .carousel_item {
   max-height: 100vh;
   width: 100%;
@@ -245,6 +256,7 @@ nav {
   bottom: 0;
   opacity: 0;
   transition: opacity .5s ease-in-out;
+  z-index: 40;
 }
 
 .carousel_info_container {
@@ -277,7 +289,18 @@ nav {
   width: 100%;
 }
 
-.carousel_button {
+.carousel-btn {
+  border: none;
+  background-color: #4c8c46;
+  color: white;
+  font-family: Bodo;
+  font-size: 1.5rem;
+  height: 80px;
+  width: 250px;
+  border-radius: 20px;
+}
+
+.about-btn {
   background-color: #4c8c46;
   font-family: Montserrat;
   border: none;
@@ -289,7 +312,7 @@ nav {
   transition: all .2s ease-in;
 }
 
-.carousel_button:hover {
+.about-btn:hover {
   transform: rotate(-5deg) scale(1.1);
   background-color: #207200;
   transition: all .2s ease-in;
@@ -352,7 +375,7 @@ nav {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(255, 191, 202, 0.733);
+  background-color: rgba(255, 254, 191, 0.4);
   background-blend-mode:overlay;
   position: fixed;
   top: 0;
@@ -551,7 +574,6 @@ nav {
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  height: 40vh;
   display: flex;
   position: relative;
   align-items: center;
@@ -664,6 +686,12 @@ nav {
 
   .carousel_info_container h2 {
     font-size: 3rem;
+  }
+
+  .carousel-btn {
+    width: 330px;
+    font-size: 2rem;
+    height: 100px;
   }
 
   .bio-1,
