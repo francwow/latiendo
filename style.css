@@ -119,8 +119,12 @@ nav {
 
 .logo {
   margin-left: 20px;
-  width: 300px;
+  width: 220px;
   position: relative;
+}
+
+.home-divider {
+  display: none;
 }
 
 .nav-divider {
@@ -138,13 +142,13 @@ nav {
   position: relative;
 }
 
-.logo a span:last-child {
+.logo a span:first-child {
   color: #4c8c46;
   font-size: larger;
   text-decoration: none;
   text-align: center;
   position: relative;
-  padding: 5px;
+  padding: 7px;
   border-radius: 5px;
 }
 
@@ -423,24 +427,116 @@ nav {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 72vh;
   display: flex;
   justify-content: center;
   align-items:flex-end;
+  position: relative;
+  border: #ffec5c solid 2px;
 }
 
 .contact-info {
-  width: 80%;
+  width: 100%;
   display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #ffec5c10;
 }
 
 .contact-info h1 {
   padding: 0;
+  color: white;
+  margin-bottom: 20px;
 }
+
+.contact-item {
+  margin: 5px 0;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(97, 97, 97, .3);
+  border-radius: 20px;
+}
+
+.contact-item span {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 10px;
+  font-size: 1.5rem;
+}
+
+.contact-item svg {
+  width: 30px;
+  height: 30px;
+}
+
+.contact-item svg,
+.contact-item span,
+.contact-item a {
+  color: white;
+  fill: white;
+  text-decoration: none;
+}
+
+.heart {
+  position: relative;
+  top: 0%;
+  right: 0%;
+  bottom: -10%;
+  left: 0.3%;
+  background-color: rgb(255, 49, 83);
+  height: 30px;
+  width: 30px;
+  transform: rotate(-45deg);
+  animation-name: beat;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  margin: 20px 0;
+}
+
+.heart:after {
+  background-color: rgb(255, 49, 83);
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0px;
+  left: 18px;
+}
+
+.heart:before {
+  background-color: rgb(255, 49, 83);
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -18px;
+  left: 0px;
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ffec5c;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1) rotate(-45deg);
+  }
+  50% {
+    transform: scale(0.6) rotate(-45deg);
+  }
+}
+/* / contacto.html */
 
 /* / MAIN SECTION */
 
@@ -777,6 +873,12 @@ nav {
 
   .logo {
     margin-left: 100px;
+  }
+
+  .home-divider {
+    display: none;
+    justify-content:space-between;
+    align-items: center;
   }
 
   .carousel_info_container h2 {
