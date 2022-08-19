@@ -36,9 +36,10 @@ img {
 }
 
 h1 {
-  font-family: Bodo, Arial, Helvetica, sans-serif;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
   text-align: center;
   padding-top: 100px;
+  font-weight: 800;
 }
 
 /* / GENERAL STYLES */
@@ -48,7 +49,7 @@ h1 {
 /* MAIN-NAV */
 
 nav {
-  font-family: Bodo;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
 .nav-container {
@@ -64,7 +65,7 @@ nav {
   align-items: center;
   min-height: 8vh;
   width: 100%;
-  background-color: #ffec5c;
+  background-color: #ffffff;
   opacity: .9;
 }
 
@@ -80,7 +81,7 @@ nav {
   padding: 20px 0;
   height: 60vh;
   top: 75px;
-  background-color: #ffec5c;
+  background-color: #ffffff;
   align-items: center;
   justify-content: space-around;
   width: 100%;
@@ -101,13 +102,9 @@ nav {
   border-radius: 5px;
 }
 
-.nav-links li:hover,
 .nav-links li:hover a,
-.home:hover,
-.home:hover a,
 .logo:hover a span:last-child {
-  background-color: #4c8c46;
-  color: #ffec5c;
+  border-bottom: 2px solid #4c8c46;
 }
 
 .nav-links a {
@@ -131,7 +128,7 @@ nav {
   width: 2px;
   height: 40px;
   border-radius: 50px;
-  background-color: #4c8c46;
+  background-color: #45bb3a;
 }
 
 .logo a {
@@ -143,7 +140,7 @@ nav {
 }
 
 .logo a span:first-child {
-  color: #4c8c46;
+  color: #45bb3a;
   font-size: larger;
   text-decoration: none;
   text-align: center;
@@ -180,7 +177,7 @@ nav {
 .burger div {
   width: 30px;
   height: 3px;
-  background-color: #ffec5c; 
+  background-color: #ffffff; 
   margin: 5px;
   transition: all 0.3s ease;
 }
@@ -257,8 +254,8 @@ nav {
   background-color: white;
 }
 
-.isGrey {
-  background-color: rgb(199, 199, 199);
+.isGreen {
+  background-color: #45bb3a;
 }
 
 .carousel {
@@ -320,25 +317,25 @@ nav {
 .carousel_header {
   text-align: center;
   margin: auto;
-  font-family: Bodo;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
   color: white;
   width: 100%;
 }
 
 .carousel-btn {
   border: none;
-  background-color: #4c8c46;
+  background-color: #45bb3a;
   color: white;
-  font-family: Bodo;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
-  height: 80px;
-  width: 250px;
-  border-radius: 20px;
+  height: 60px;
+  width: 230px;
+  border-radius: 40px;
 }
 
 .about-btn {
   background-color: #4c8c46;
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
   border: none;
   color: white;
   width: 100px;
@@ -374,7 +371,7 @@ nav {
 }
 
 .img-3 {
-  background-image: url(images/bioconstruccion/Piso\ en\ Barro\ La\ Calera\ -\ Colombia\ 3.JPG);
+  background-image: url(images/photos/paisaje-2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -407,12 +404,10 @@ nav {
 }
 
 .background {
-  background-image: url(images/photos/foto-familiar-1.JPG);
+  background-image: url(images/photos/paisaje-6.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(255, 254, 191, 0.4);
-  background-blend-mode:overlay;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -556,9 +551,6 @@ nav {
 }
 
 .about-heading {
-  background-image: url(images/graficos/grafico-6.png);
-  background-position: center;
-  background-size: cover;
   height: 200px;
   width: 200px;
   margin: auto;
@@ -566,9 +558,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateY(100%);
-  opacity: 0;
-  transition: all 1s ease-in-out;
+  opacity: 1;
 }
 
 .header-active {
@@ -577,12 +567,12 @@ nav {
 }
 
 .about-heading h2 {
-  font-family: Bodo;
-  color: #ff5a33;
+  font-family: Bodo, Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 2.5rem;
 }
 
 .bio-container {
-  margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -620,9 +610,6 @@ nav {
 }
 
 .bio {
-  background-image: url(images/graficos/grafico-2.png);
-  background-size: cover;
-  background-position: center;
   height: 350px;
   width: 350px;
   display: flex;
@@ -632,7 +619,7 @@ nav {
   transform: scale(.1);
   transition: all 1s ease-in-out;
   position: relative;
-  margin: 30px 0;
+  margin: 10px 0;
 }
 
 .popActive {
@@ -642,7 +629,7 @@ nav {
 
 .bioText-container {
   position: absolute;
-  background-color:rgba(255, 20, 145, 0.781);
+  background-color:rgba(44, 44, 44, 0.8);
   opacity: 0;
   width: 75%;
   height: 80%;
@@ -652,20 +639,18 @@ nav {
   align-items: center;
   padding: 0 20px;
   border-radius: 10%;
-  transform: scale(1,0);
-  transform-origin: top;
   transition: all .2s ease-in-out;
 }
 
 .bio:hover .bioText-container {
-  transform: scale(1, 1);
   opacity: 1;
+  transition: all .2s ease-in-out;
 }
 
 .bioText-container p,
 .bioText-container a button {
   color: white;
-  font-family: Bodo;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
 .bioText-container a button {
@@ -700,13 +685,13 @@ nav {
 
 .logos-header-container {
   margin-bottom: 50px;
-  border-bottom: solid 1px rgb(155, 155, 155);
+  border-bottom: solid 1px #00b1de;
 }
 
 .logos-header {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight:100 ;
-  color: rgb(97, 97, 97);
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  color: #00b1de;
 }
 
 .logos-wrapper {
@@ -745,14 +730,14 @@ nav {
 .contact-btn {
   padding: 0;
   margin: 0;
-  width: 300px;
-  height: 100px;
+  width: 200px;
+  height: 60px;
   border: none;
   background-color: #00b1de;
-  border-radius: 20px;
+  border-radius: 40px;
   color: white;
-  font-family: Bodo;
-  font-size: 2rem;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
 }
 
 /* ALIADOS SECTION */
@@ -863,13 +848,13 @@ nav {
     text-decoration: none;
   }
 
-  .nav-ul li:hover {
-    background-color: #4c8c46;
+  .nav-ul li:hover a {
+    border-bottom: 2px solid #4c8c46;
   }
 
-  .nav-ul li:hover a {
-    color: #ffec5c;
-  }
+  /* .nav-ul li:hover a {
+
+  } */
 
   .logo {
     margin-left: 100px;
@@ -886,9 +871,9 @@ nav {
   }
 
   .carousel-btn {
-    width: 330px;
+    width: 300px;
     font-size: 2rem;
-    height: 100px;
+    height: 70px;
   }
 
   .bio-1,
@@ -896,6 +881,12 @@ nav {
   .bio-3 {
     width: 500px;
     height: 500px;
+  }
+
+  .contact-btn {
+    width: 260px;
+    height: 80px;
+    font-size: 2rem;
   }
 
   .about-heading {

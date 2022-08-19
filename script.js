@@ -84,9 +84,9 @@ const carousel = () => {
 
     dotsChildren.forEach((item, itemIndex) => {
       if (itemIndex === index) {
-        item.classList.add('isGrey');
+        item.classList.add('isGreen');
       } else {
-        item.classList.remove('isGrey');
+        item.classList.remove('isGreen');
       }
     }); 
   }
@@ -108,9 +108,9 @@ const carousel = () => {
 
       dotsChildren.forEach((item, j) => {
         if (j === i) {
-          item.classList.add('isGrey');
+          item.classList.add('isGreen');
         } else {
-          item.classList.remove('isGrey');
+          item.classList.remove('isGreen');
         }
       }); 
 
@@ -174,7 +174,7 @@ const aboutPopUp = () => {
   window.addEventListener('scroll', () => {
 
     let bioChildren = bio.children;
-    let screenPosition = window.innerHeight / 1.7;
+    let screenPosition = window.innerHeight / 1.3;
     let screenPosition2 = window.innerHeight / 1.3;
     let headerPosition = header.getBoundingClientRect().top;
 
@@ -187,11 +187,11 @@ const aboutPopUp = () => {
       }
     }
 
-    if (headerPosition < screenPosition2) {
-      header.classList.add('header-active');
-    } else {
-      header.classList.remove('header-active');
-    } 
+    // if (headerPosition < screenPosition2) {
+    //   header.classList.add('header-active');
+    // } else {
+    //   header.classList.remove('header-active');
+    // } 
   });
 }
 
