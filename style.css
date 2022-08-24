@@ -430,13 +430,13 @@ nav {
 }
 
 .about-heading {
-  height: 200px;
-  width: 200px;
   margin: auto;
+  margin-top: 50px;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items:center;
   opacity: 1;
 }
 
@@ -448,7 +448,30 @@ nav {
 .about-heading h2 {
   font-family: Bodo, Arial, Helvetica, sans-serif;
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
+}
+
+/* .about-info-container {
+  display: flex;
+} */
+
+.about-text-container {
+  width: 85%;
+  margin: auto;
+}
+
+.about-text-container p {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: .8rem;
+  color: white;
+}
+
+.about-text-container p:first-child {
+  margin-top: 30px;
+}
+
+.about-text-container p:nth-child(2) {
+  color: rgb(255, 225, 91);
 }
 
 .bio-container {
@@ -456,7 +479,6 @@ nav {
   flex-direction: column;
   align-items: center;
 }
-
 
 .foto-aleli {
   background-image: url(images/inicio/foto-aleli.JPG);
@@ -467,6 +489,8 @@ nav {
   height: 80%;
   border-radius: 10%;
   transition: all .3s ease-in-out;
+  overflow: hidden;
+  position: relative;
 }
 
 .foto-cami {
@@ -478,6 +502,8 @@ nav {
   height: 80%;
   border-radius: 10%;
   transition: all .3s ease-in-out;
+  overflow: hidden;
+  position: relative;
 }
 
 .foto-juan {
@@ -489,6 +515,8 @@ nav {
   height: 80%;
   border-radius: 10%;
   transition: all .3s ease-in-out;
+  overflow: hidden;
+  position: relative;
 }
 
 .bio {
@@ -497,8 +525,8 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  transform: scale(.1);
+  opacity: 1;
+  transform: scale(1);
   transition: all 1s ease-in-out;
   position: relative;
   margin: 10px 0;
@@ -509,6 +537,11 @@ nav {
   transition: all .3s ease-in-out;
 }
 
+.bio-2,
+.bio-3 {
+  display: none;
+}
+
 .popActive {
   opacity: 1;
   transform: scale(1);
@@ -516,28 +549,25 @@ nav {
 
 .bioText-container {
   position: absolute;
-  background-color:rgba(44, 44, 44, 0.8);
-  opacity: 0;
-  width: 75%;
-  height: 80%;
+  width: 100%;
+  height: 50px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content:space-around;
   align-items: center;
-  padding: 0 20px;
-  border-radius: 10%;
-  transition: all .2s ease-in-out;
+  background-color: #4c8c46;
+  bottom: 0%;
+  border-radius: 0 0 10% 10%;
 }
 
-.bio:hover .bioText-container {
-  opacity: 1;
-  transition: all .2s ease-in-out;
+.arrow {
+  color: white;
 }
 
 .bioText-container p,
 .bioText-container a button {
   color: white;
   font-family: Montserrat, Arial, Helvetica, sans-serif;
+  margin-bottom: 0;
 }
 
 .bioText-container a button {
@@ -608,8 +638,14 @@ nav {
   width: 100%;
   height: 300px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.contact-btn-container h2 {
+  color: white;
+  margin-bottom: 20px;
 }
 
 .contact-btn {
@@ -695,7 +731,7 @@ nav {
 
 /* latiendo.html */
 .latiendo-container {
-  background-image: url(images/audiovisual/nevado-el-cocuy-2019.jpg);
+  background-image: url(images/photos/paisaje-7.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -708,7 +744,48 @@ nav {
 
 .latiendo-container h1 {
   letter-spacing: 3px;
+  font-size: 2.5rem;
 }
+
+.latiendo-container p {
+  margin-top: 20px;
+  font-family: Bebas, Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.bio-container-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.latiendo-bio-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 500px;
+  margin: 50px 20px;
+}
+
+.bio-info {
+  max-width: 85%;
+}
+
+.bio-info p {
+  font-size: .8rem;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+.bio-info h2 {
+  font-family: Bodo, Arial, Helvetica, sans-serif;
+  color: turquoise;
+}
+
 /* / latiendo.html */
 
 /* contacto.html */
@@ -900,6 +977,21 @@ nav {
     height: 70px;
   }
 
+  .bio-container {
+    flex-direction: row;
+  }
+
+  .about-text-container {
+    width: 85%;
+    margin: auto;
+  }
+  
+  .about-text-container p {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: white;
+  }
+
   .bio-1,
   .bio-2,
   .bio-3 {
@@ -907,8 +999,18 @@ nav {
     height: 500px;
   }
 
+  .bio-2,
+  .bio-3 {
+    display: flex;
+  }
+
   .contact-btn-container {
     height: 500px;
+  }
+
+  .contact-btn-container h2 {
+    font-size: 2.5rem;
+    font-family: Monstserrat, Arial, Helvetica, sans-serif;
   }
 
   .contact-btn {
@@ -918,12 +1020,47 @@ nav {
   }
 
   .about-heading {
-    height: 400px;
-    width: 400px;
+    margin-top: 100px;
   }
 
   .about-heading h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
+  }
+
+  .latiendo-bio-container {
+    flex-direction: row;
+    max-width: 1000px;
+    justify-content: space-around;
+    align-items:flex-start;
+  }
+
+  .bio-info,
+  .bio-img {
+    flex-basis: 45%;
+  }
+
+  .bio-info {
+    max-width: 100%;
+  }
+
+  .bio-info p {
+    font-size: 1rem;
+  }
+
+  .cami .bio-info {
+    order: 2;
+  }
+
+  .cami .bio-img {
+    order: 1;
+  }
+
+  .latiendo-container h1 {
+    font-size: 3rem;
+  }
+  
+  .latiendo-container p {
+    font-size: 2.2rem;
   }
 
 }
