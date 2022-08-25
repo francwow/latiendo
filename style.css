@@ -477,74 +477,41 @@ nav {
 .bio-container {
   display: flex;
   flex-direction: column;
+  justify-content:space-around;
+  gap: 10px;
   align-items: center;
-}
-
-.foto-aleli {
-  background-image: url(images/inicio/foto-aleli.JPG);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 75%;
-  height: 80%;
-  border-radius: 10%;
-  transition: all .3s ease-in-out;
-  overflow: hidden;
   position: relative;
-}
-
-.foto-cami {
-  background-image: url(images/inicio/foto-cami.JPG);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 75%;
-  height: 80%;
-  border-radius: 10%;
-  transition: all .3s ease-in-out;
-  overflow: hidden;
-  position: relative;
-}
-
-.foto-juan {
-  background-image: url(images/inicio/foto-juan.JPG);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 75%;
-  height: 80%;
-  border-radius: 10%;
-  transition: all .3s ease-in-out;
-  overflow: hidden;
-  position: relative;
+  max-width: 85%;
+  margin: auto;
+  margin-top: 50px;
 }
 
 .bio {
-  height: 350px;
-  width: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-  transform: scale(1);
-  transition: all 1s ease-in-out;
+  max-width: 33.33%;
   position: relative;
-  margin: 10px 0;
+  overflow: hidden;
 }
 
-.bio:hover div:last-child {
-  background-size: 130%;
+.bio:hover .bio-img {
+  transition: all .3s ease-in-out;
+  transform: scale(1.2);
+}
+
+.bio1 {
+  max-width: 400px;
+  height: 300px;
+}
+
+.bio-img {
+  max-width: 100%;
+  height: 300px;
+  position: relative;
   transition: all .3s ease-in-out;
 }
 
-.bio-2,
-.bio-3 {
+.bio2,
+.bio3 {
   display: none;
-}
-
-.popActive {
-  opacity: 1;
-  transform: scale(1);
 }
 
 .bioText-container {
@@ -556,7 +523,7 @@ nav {
   align-items: center;
   background-color: #4c8c46;
   bottom: 0%;
-  border-radius: 0 0 10% 10%;
+  /* border-radius: 0 0 10% 10%; */
 }
 
 .arrow {
@@ -589,7 +556,7 @@ nav {
 
 .aliados-container {
   width: 100%;
-  height: 600px;
+  height: 700px;
   background-color: #e9e9e9;
   position: relative;
   z-index: 40;
@@ -774,6 +741,7 @@ nav {
 
 .bio-info {
   max-width: 85%;
+  flex-basis: 45%;
 }
 
 .bio-info p {
@@ -784,6 +752,10 @@ nav {
 .bio-info h2 {
   font-family: Bodo, Arial, Helvetica, sans-serif;
   color: turquoise;
+}
+
+.latiendo-bio-img {
+  flex-basis: 45%;
 }
 
 /* / latiendo.html */
@@ -992,15 +964,8 @@ nav {
     color: white;
   }
 
-  .bio-1,
-  .bio-2,
-  .bio-3 {
-    width: 500px;
-    height: 500px;
-  }
-
-  .bio-2,
-  .bio-3 {
+  .bio2,
+  .bio3 {
     display: flex;
   }
 
@@ -1034,33 +999,24 @@ nav {
     align-items:flex-start;
   }
 
-  .bio-info,
-  .bio-img {
-    flex-basis: 45%;
-  }
-
-  .bio-info {
-    max-width: 100%;
-  }
-
-  .bio-info p {
-    font-size: 1rem;
-  }
-
-  .cami .bio-info {
-    order: 2;
-  }
-
-  .cami .bio-img {
-    order: 1;
-  }
-
   .latiendo-container h1 {
     font-size: 3rem;
   }
   
   .latiendo-container p {
     font-size: 2.2rem;
+  }
+
+  .cami .bio-info {
+    order: 2;
+  }
+
+  .cami .latiendo-bio-img {
+    order: 1;
+  }
+
+  .bio-info p {
+    font-size: 1rem;
   }
 
 }

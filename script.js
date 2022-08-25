@@ -165,37 +165,37 @@ const carousel = () => {
 
 
 // MANIPULATE ELEMENTS IN ABOUT SECTION TO APPEAR ON SCROLL.
-const aboutPopUp = () => {
+// const aboutPopUp = () => {
 
-  let bio = document.querySelector('.bio-container');
-  let header = document.querySelector('.about-heading');
-
-
-  window.addEventListener('scroll', () => {
-
-    let bioChildren = bio.children;
-    let screenPosition = window.innerHeight / 1.3;
-    let screenPosition2 = window.innerHeight / 1.3;
-    let headerPosition = header.getBoundingClientRect().top;
-
-    for (i = 0; i < bioChildren.length; i++) {
-      let bioPosition = bioChildren[i].getBoundingClientRect().top;
-      if (bioPosition < screenPosition) {
-        bioChildren[i].classList.add('popActive');
-      } else {
-        bioChildren[i].classList.remove('popActive');
-      }
-    }
-
-    // if (headerPosition < screenPosition2) {
-    //   header.classList.add('header-active');
-    // } else {
-    //   header.classList.remove('header-active');
-    // } 
-  });
-}
+//   let bio = document.querySelector('.bio-container');
+//   let header = document.querySelector('.about-heading');
 
 
-aboutPopUp();
+//   window.addEventListener('scroll', () => {
+
+//     let bioChildren = bio.children;
+//     let screenPosition = window.innerHeight / 1.3;
+//     let screenPosition2 = window.innerHeight / 1.3;
+//     let headerPosition = header.getBoundingClientRect().top;
+
+//     for (i = 0; i < bioChildren.length; i++) {
+//       let bioPosition = bioChildren[i].getBoundingClientRect().top;
+//       if (bioPosition < screenPosition) {
+//         bioChildren[i].classList.add('popActive');
+//       } else {
+//         bioChildren[i].classList.remove('popActive');
+//       }
+//     }
+
+//     // if (headerPosition < screenPosition2) {
+//     //   header.classList.add('header-active');
+//     // } else {
+//     //   header.classList.remove('header-active');
+//     // } 
+//   });
+// }
+
+
+// aboutPopUp();
 carousel();
 navSlide();
