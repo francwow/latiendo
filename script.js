@@ -120,6 +120,7 @@ const carousel = () => {
     });
   });
 
+  // LONGER VERSION OF THE CODE ABOVE
   // dotOne.addEventListener('click', () => {
   //   clearInterval(interval);
   //   index = 0;
