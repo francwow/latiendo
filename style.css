@@ -1,4 +1,4 @@
-/* FONTS */
+/* fonts */
 @font-face {
   font-family: Montserrat;
   src: url(fonts/Montserrat-Bold.ttf);
@@ -15,9 +15,9 @@
   font-family: Bodo;
   src: url(fonts/Bodo\ Amat.otf);
 }
-/* / FONTS */
+/* / fonts */
 
-/* GENERAL STYLES */
+/* general styles */
 * {
   box-sizing: border-box;
 }
@@ -44,11 +44,11 @@ h1 {
   padding-top: 100px;
   font-weight: 800;
 }
-/* / GENERAL STYLES */
+/* / general styles */
 
 /* ------------------- MOBILE-FIRST --------------------- */
 
-/* MAIN-NAV */
+/* main-nav */
 nav {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
@@ -206,14 +206,14 @@ nav {
   }
    
  }
-/* / MAIN-NAV */
+/* / main-nav */
 
-/* HOME PAGE */
+/* index.html */
 .sections-container {
   position: relative;
 }
 
-/* MAIN SECTION */
+/* main section */
 .dots {
   position: absolute;
   bottom: 10%;
@@ -413,9 +413,9 @@ nav {
   left: 0;
   z-index: 30;
 }
-/* / MAIN SECTION */
+/* / main section */
 
-/* ABOUT SECTION */
+/* about section */
 .about-section {
   width: 100%;
   min-height: 100vh;
@@ -451,10 +451,6 @@ nav {
   font-size: 2rem;
 }
 
-/* .about-info-container {
-  display: flex;
-} */
-
 .about-text-container {
   width: 85%;
   margin: auto;
@@ -471,14 +467,13 @@ nav {
 }
 
 .about-text-container p:nth-child(2) {
-  color: rgb(255, 225, 91);
+  color:#fff39b;
 }
 
 .bio-container {
   display: flex;
-  flex-direction: column;
-  justify-content:space-around;
-  gap: 10px;
+  justify-content: center;
+  gap: 50px;
   align-items: center;
   position: relative;
   max-width: 85%;
@@ -490,6 +485,8 @@ nav {
   max-width: 33.33%;
   position: relative;
   overflow: hidden;
+  max-width: 400px;
+  height: 220px;
 }
 
 .bio:hover .bio-img {
@@ -497,32 +494,21 @@ nav {
   transform: scale(1.2);
 }
 
-.bio1 {
-  max-width: 400px;
-  height: 300px;
-}
-
 .bio-img {
   max-width: 100%;
-  height: 300px;
   position: relative;
   transition: all .3s ease-in-out;
-}
-
-.bio2,
-.bio3 {
-  display: none;
 }
 
 .bioText-container {
   position: absolute;
   width: 100%;
-  height: 50px;
+  height: 35px;
   display: flex;
   justify-content:space-around;
   align-items: center;
   background-color: #4c8c46;
-  bottom: 0%;
+  top: 0%;
   /* border-radius: 0 0 10% 10%; */
 }
 
@@ -537,17 +523,9 @@ nav {
   margin-bottom: 0;
 }
 
-.bioText-container a button {
-  background-color: #00b1de;
-  box-shadow: 2px 2px 3px 1px rgba(0,0,0,.3);
-}
+/* / about section */
 
-.bioText-container a button:hover {
-  background-color: #00c2f3;
-}
-/* / ABOUT SECTION */
-
-/* ALIADOS SECTION */
+/* aliados section */
 .aliados-section {
   min-height: 100vh;
   position: relative;
@@ -612,7 +590,9 @@ nav {
 
 .contact-btn-container h2 {
   color: white;
+  text-align: center;
   margin-bottom: 20px;
+  font-family: Bodo, Arial, Helvetica, sans-serif;
 }
 
 .contact-btn {
@@ -628,8 +608,8 @@ nav {
   font-size: 1.5rem;
 }
 
-/* ALIADOS SECTION */
-/* FOOTER */
+/* aliados section */
+/* footer */
 .footer {
   background-image: url(images/photos/paisaje-4.jpg);
   background-size: cover;
@@ -693,8 +673,8 @@ nav {
   color: white;
   text-decoration: none;
 }
-/* / FOOTER */
-/* / HOME PAGE */
+/* / footer */
+/* / index.html */
 
 /* latiendo.html */
 .latiendo-container {
@@ -716,6 +696,7 @@ nav {
 
 .latiendo-container p {
   margin-top: 20px;
+  text-align: center;
   font-family: Bebas, Arial, Helvetica, sans-serif;
   color: white;
   font-size: 1.8rem;
@@ -829,7 +810,7 @@ nav {
 .contact-info h1 {
   padding: 0;
   color: white;
-  margin-bottom: 20px;
+  margin: 0 20px 20px 20px;
   letter-spacing: 3px;
   font-size: 2.5rem;
 }
@@ -930,11 +911,29 @@ nav {
 
 /* MEDIA QUERIES */
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 480px) {
 
   .tienda-item {
     flex-basis: 40%;
     max-width: 250px;
+  }
+
+  .bio {
+    height: 260px;
+  }
+
+  .bioText-container {
+    top:initial;
+    bottom: 0%;
+    height: 50px;
+  }
+
+  .about-text-container p {
+    font-size: 1rem;
+  }
+
+  .about-heading h2 {
+    font-size: 2.5rem;
   }
 
 }
@@ -974,10 +973,6 @@ nav {
     border-bottom: 2px solid #4c8c46;
   }
 
-  /* .nav-ul li:hover a {
-
-  } */
-
   .logo {
     margin-left: 100px;
   }
@@ -1002,6 +997,13 @@ nav {
     flex-direction: row;
   }
 
+  .bio {
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
+    height: 400px;
+  }
+
   .about-text-container {
     width: 85%;
     margin: auto;
@@ -1013,18 +1015,13 @@ nav {
     color: white;
   }
 
-  .bio2,
-  .bio3 {
-    display: flex;
-  }
-
   .contact-btn-container {
     height: 500px;
   }
 
   .contact-btn-container h2 {
     font-size: 2.5rem;
-    font-family: Monstserrat, Arial, Helvetica, sans-serif;
+    font-family: Bodo, Arial, Helvetica, sans-serif;
   }
 
   .contact-btn {
