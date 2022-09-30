@@ -61,7 +61,6 @@ const carousel = () => {
   console.log(dotThree);
 
   // Set Interval for Animation
-  // STOP ANIMATIONS
   let interval = setInterval(function() {
     startCarousel();
   }, 3000);
@@ -83,10 +82,10 @@ const carousel = () => {
     }); 
 
     dotsChildren.forEach((item, itemIndex) => {
-      if (itemIndex === index) {
-        item.classList.add('isGreen');
-      } else {
+      if (itemIndex !== index) {
         item.classList.remove('isGreen');
+      } else {
+        item.classList.add('isGreen');
       }
     }); 
   }
@@ -94,7 +93,7 @@ const carousel = () => {
 
   dotsChildren.forEach((dot, i) => {
     dot.addEventListener('click', () => {
-
+      // STOP ANIMATIONS
       clearInterval(interval);
       index = i;
 

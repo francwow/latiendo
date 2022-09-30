@@ -33,8 +33,8 @@ body {
 }
 
 img {
-  width: 100%;
-  max-height: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 h1 {
@@ -467,7 +467,7 @@ nav {
 }
 
 .about-text-container p:nth-child(2) {
-  color:#fff39b;
+  color: var(--bs-warning);
 }
 
 .bio-container {
@@ -691,15 +691,18 @@ nav {
 
 .latiendo-container h1 {
   letter-spacing: 3px;
-  font-size: 2.5rem;
+  text-align: center;
+  font-size: 2.3rem;
+  margin: 0 20px 20px 20px;
 }
 
 .latiendo-container p {
   margin-top: 20px;
   text-align: center;
-  font-family: Bebas, Arial, Helvetica, sans-serif;
-  color: white;
-  font-size: 1.8rem;
+  font-family: Bodo, Arial, Helvetica, sans-serif;
+  color: var(--bs-warning);
+  font-size: 1.6rem;
+  margin: 0 20px 20px 20px;
 }
 
 .bio-container-wrapper {
@@ -740,46 +743,85 @@ nav {
 }
 /* / latiendo.html */
 
-/* tienda.html */
-.tienda-container {
-  /* background-image: url(images/photos/paisaje-5.jpg);
+/* talleres.html */
+.talleres-container {
+  background-image: url(images/photos/BF2.JPG);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; */
-  background-color: #00b1de;
+  background-size: cover;
   min-height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-items: center;
-  align-items: center;
-}
-
-.tienda-items-container {
-  max-width: 80vw;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 50px 40px;
-  margin: 40px 0;
-}
-
-.tienda-item {
-  flex-grow: 1;
-  flex-basis: 90%;
-  max-width: 200px;
-  background-color: white;
-  display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 200px;
-  box-shadow: 5px 5px 7px 5px rgba(0,0,0,.1);
 }
 
-.tienda-item img {
-  width: 85%;
-  max-width: 150px;
+.talleres-container h1 {
+  font-size: 2.3rem;
+  text-align: center;
+  margin: 0 20px 20px 20px;
 }
-/* / tienda.html */
+
+.talleres-container p {
+  font-size: 1.6rem;
+  color: var(--bs-warning);
+  font-family: Bodo, Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0 20px 20px 20px;
+}
+
+.talleres-container-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.talleres-info-container {
+  margin: 20px;
+}
+
+.talleres-info-container p {
+  color: white;
+  font-family: Bodo, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  /* width: 350px; Continuar acá. */
+}
+
+
+.talleres-info-img-1 {
+  position: relative;
+  background-image: url(images/talleres/BF3.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+}
+
+.talleres-info-img-2 {
+  background-image: url(images/talleres/TF6.jpeg);
+  display: flex;
+  align-items: flex-end;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:350px;
+  height: 250px;
+}
+
+.width-changes {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  max-width: 100%;
+  height: 200px;
+}
+
+/* / talleres.html */
 
 /* contacto.html */
 .contacto-container {
@@ -790,7 +832,7 @@ nav {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content:space-around;
+  justify-content:center;
   align-items: center;
   position: relative;
   padding-top: 50px;
@@ -805,6 +847,7 @@ nav {
   align-items: center;
   background-color: #ffec5c10;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .contact-info h1 {
@@ -825,10 +868,16 @@ nav {
   border-radius: 20px;
 }
 
+.contact-item a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .contact-item span {
   font-family: Arial, Helvetica, sans-serif;
   margin-left: 10px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .contact-item svg {
@@ -934,6 +983,26 @@ nav {
 
   .about-heading h2 {
     font-size: 2.5rem;
+  }
+
+  .latiendo-container h1 {
+    font-size: 2.5rem;
+  }
+  
+  .latiendo-container p {
+    font-size: 1.8rem;
+  }
+
+  .contact-item span {
+    font-size: 1.5rem;
+  }
+
+  .talleres-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .talleres-container p {
+    font-size: 1.8rem;
   }
 
 }
@@ -1065,18 +1134,12 @@ nav {
     font-size: 1rem;
   }
 
-  .tienda-items-container {
-    grid-template-columns: repeat(4, 1fr);
+  .talleres-container h1 {
+    font-size: 3rem;
   }
 
-  .tienda-item {
-    flex-basis: 25%;
-    max-width: 25%;
-  }
-
-  .tienda-item img {
-    width: 85%;
-    max-width: 150px;
+  .talleres-container p {
+    font-size: 2.2rem;
   }
 
 }
