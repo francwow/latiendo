@@ -793,20 +793,14 @@ nav {
   font-size: 1.2rem; 
 }
 
-
-.talleres-info-img-1 {
-  position: relative;
-  max-width: 500px;
-  overflow: hidden;
-  border-radius: 5px;
-}
-
+.talleres-info-img-1,
 .talleres-info-img-2 {
   position: relative;
   max-width: 500px;
   overflow: hidden;
   border-radius: 5px;
-}
+  cursor: pointer;
+} 
 
 .talleres-info-img-1 img,
 .talleres-info-img-2 img {
@@ -835,6 +829,111 @@ nav {
   color: white;
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 1rem;
+  font-weight: 500;
+}
+
+
+.modal-container,
+.modal-container-2 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(34, 34, 34, 0.9);
+  z-index: 999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-close,
+.modal-close-2 {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  background-color: #ffffff;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.modal-close::before,
+.modal-close-2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  height: 2px;
+  width: 50%;
+  transform: rotate(45deg);
+  background-color: rgb(43, 43, 43);
+}
+
+.modal-close::after,
+.modal-close-2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  height: 2px;
+  width: 50%;
+  transform: rotate(-45deg);
+  background-color: rgb(43, 43, 43);
+}
+
+.modal-arrow-left,
+.modal-arrow-left-2 {
+  position: fixed;
+  left: 12px;
+  fill: white;
+  z-index: 99;
+}
+
+.modal-arrow-right,
+.modal-arrow-right-2 {
+  position: fixed;
+  right: 0;
+  fill: white;
+  z-index: 99;
+}
+
+.img-carousel-container {
+  position: relative;
+  max-width: 1000px;
+  min-width: 300px;
+  height: 700px;
+  padding: 200px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-container,
+.img-container-2 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: auto;
+}
+
+.img-show {
+  transform: translateX(0%);
+}
+
+.img-hide {
+  transform: translateX(3000%);
 }
 
 /* / talleres.html */
@@ -975,7 +1074,6 @@ nav {
 
 
 /* MEDIA QUERIES */
-
 @media screen and (min-width: 480px) {
 
   .tienda-item {
@@ -1173,6 +1271,18 @@ nav {
     font-size: 1.8rem;
   }
 
-}
+  .img-container,
+  .img-container-2 {
+    width: 600px;
+  }
 
+  .modal-arrow-left {
+    left: 62px;
+  }
+
+  .modal-arrow-right {
+    right: 50px;
+  }
+
+}
 /* / MEDIA QUERIES */
