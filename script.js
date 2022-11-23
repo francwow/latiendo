@@ -66,7 +66,7 @@ const carousel = () => {
   }, 3000);
 
   // Index for carouselItem Array
-  let index = 1;
+  let index = 0;
 
   // Function for adding and removing show class
   startCarousel = () => {
