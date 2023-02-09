@@ -166,7 +166,6 @@ const imgModal = () => {
   });
 
   arrowLeftTwo.addEventListener("click", () => {
-    console.log(arrowLeftTwo);
     index -= 1;
     if (index < 0) {
       index = 4;
